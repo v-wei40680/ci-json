@@ -11,9 +11,13 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello
+
   build:
     runs-on: ubuntu-latest
-
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
