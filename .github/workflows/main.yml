@@ -18,3 +18,4 @@ jobs:
         run: |
           echo test, and deploy your project.
           cat config.json
+          jq . config.json
