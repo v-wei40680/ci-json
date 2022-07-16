@@ -29,5 +29,6 @@ jobs:
           content=`cat config.json`
           echo "::set-output name=packageJson::$content"
 
-      - run: echo "${{fromJson(steps.set_var.outputs.packageJson).name}}"
+      - name: Output config
+        run: echo "${{fromJson(steps.set_var.outputs.packageJson).name}}"
 
